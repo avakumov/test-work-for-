@@ -1,15 +1,15 @@
-import Content from '@/components/content'
-import Socials from '@/components/socials'
-import Spacer from '@/components/typo/spacer'
-import Dev from '@/components/dev'
-import { DesktopCallButton } from '@/components/call-button'
-import { ModalConsumer } from '@/components/context/modal'
-import { useContext } from 'react'
-import { SettingsContext } from '@/components/context/settings'
-import { DeveloperLink } from './index'
+import Content from "@/components/content";
+import Socials from "@/components/socials";
+import Spacer from "@/components/typo/spacer";
+import Dev from "@/components/dev";
+import { DesktopCallButton } from "@/components/call-button";
+import { ModalConsumer } from "@/components/context/modal";
+import { useContext } from "react";
+import { SettingsContext } from "@/components/context/settings";
+import { DeveloperLink } from "./index";
 
 export default ({ ...props }) => {
-  const settings = useContext(SettingsContext)
+  const settings = useContext(SettingsContext);
   return (
     <ModalConsumer>
       {({ showModal }) => (
@@ -19,7 +19,7 @@ export default ({ ...props }) => {
               <div className="flex-none">
                 <Spacer bSpace={20}>
                   <img
-                    src={require('@/static/branding/logo-dark.svg')}
+                    src={require("@/static/branding/logo-dark.svg")}
                     height={31}
                   />
                 </Spacer>
@@ -32,7 +32,7 @@ export default ({ ...props }) => {
                       </div>
                     </div>
                     <div className="wrap-socials">
-                      <Socials/>
+                      <Socials />
                     </div>
                   </div>
                 </div>
@@ -43,8 +43,10 @@ export default ({ ...props }) => {
                 <Spacer lSpace={70}>
                   <DesktopCallButton
                     onClickCall={async () => {
-                      const CallMe = await import('@/components/modals/call-me')
-                      showModal(CallMe.default, { centerContent: true })
+                      const CallMe = await import(
+                        "@/components/modals/call-me"
+                      );
+                      showModal(CallMe.default, { centerContent: true });
                     }}
                   />
                 </Spacer>
@@ -75,7 +77,10 @@ export default ({ ...props }) => {
             }
             .wrap-socials {
               bottom: -5px;
-              padding-left: 250px;
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              transform: translate(-50%, -50%);
             }
             .wrap-dev {
               right: 50px;
@@ -86,5 +91,5 @@ export default ({ ...props }) => {
         </div>
       )}
     </ModalConsumer>
-  )
-}
+  );
+};
