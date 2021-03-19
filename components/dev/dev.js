@@ -42,11 +42,11 @@ class Dev extends React.Component {
                 <g fill="none">
                   <path
                     d="m7.1 7.1h-7.1v-6.5h7.1zm0 41.2h-7.1v-33h7.1z"
-                    fill="#e63338"
+                    fill="#000000"
                   />
                   <path
                     d="m23.9 7.2v8h5.7v5.5h-5.7v18.3c0 1.4.3 2.3.8 2.9.6.6 1.3.9 2.3.9.4 0 .8 0 1.1-.1.4-.1.7-.2 1.1-.3l.8 5.4c-.6.3-1.3.6-2.2.8-.8.2-1.7.3-2.6.3-2.6 0-4.7-.8-6.1-2.4-1.5-1.6-2.2-4.1-2.2-7.5v-18.3h-4.9v-5.5h4.8v-8z"
-                    fill="#e63338"
+                    fill="#000000"
                   />
                   <g
                     transform="translate(34)"
@@ -86,7 +86,7 @@ class Dev extends React.Component {
             }
             .logo {
               top: 1px;
-              right: -1px;
+              right: -3px;
               position: absolute;
               pointer-events: none;
             }

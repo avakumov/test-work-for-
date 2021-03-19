@@ -19,8 +19,8 @@ export default ({ ...props }) => {
               <div className="flex-none">
                 <Spacer bSpace={20}>
                   <img
-                    src={require('@/static/branding/logo-white.svg')}
-                    height={60}
+                    src={require('@/static/branding/logo-dark.svg')}
+                    height={31}
                   />
                 </Spacer>
                 <div className="copyrights">
@@ -32,7 +32,7 @@ export default ({ ...props }) => {
                       </div>
                     </div>
                     <div className="wrap-socials">
-                      <Socials color7 />
+                      <Socials/>
                     </div>
                   </div>
                 </div>
@@ -56,10 +56,10 @@ export default ({ ...props }) => {
           </div>
           <style jsx>{`
             .footer {
-              color: white;
-              min-height: 200px;
-              background: #212121;
+              min-height: 64px;
+              background: var(--color7);
               position: relative;
+              margin-bottom: 35px;
             }
             .text {
               font-size: 10px;
@@ -69,20 +69,17 @@ export default ({ ...props }) => {
             .text :global(span) {
               color: var(--color1-dark);
             }
-            .wrap-call :global(.label) {
+            .wrap-call {
               color: var(--color1-dark);
-            }
-            .wrap-call :global(a) {
-              color: white;
+              align-self: flex-start;
             }
             .wrap-socials {
               bottom: -5px;
-              position: relative;
-              padding-left: 130px;
+              padding-left: 250px;
             }
             .wrap-dev {
               right: 50px;
-              bottom: 20px;
+              bottom: -20px;
               position: absolute;
             }
           `}</style>

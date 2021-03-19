@@ -251,13 +251,7 @@ class Flat extends React.Component {
                           <Title marginless>
                             {this.props.current_floor.placement.apartment_type}{' '}
                             -{' '}
-                            <span
-                              style={{
-                                color: statuses.getTextColor(
-                                  this.props.current_floor.placement.sold_status
-                                )
-                              }}
-                            >
+                            <span>
                               {statuses.getName(
                                 this.props.current_floor.placement.sold_status
                               )}

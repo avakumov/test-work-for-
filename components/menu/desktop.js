@@ -51,6 +51,7 @@ const MenuDesktop = props => {
   }, [])
 
   return (
+    <div className="menu-wrapper">
     <div className={classnames('menu flex items-center', { [theme]: true })}>
       <div className="basis-1">
         <div className="burger-wrap">
@@ -86,7 +87,7 @@ const MenuDesktop = props => {
         <div className="logo-wrap" onClick={closeMenu}>
           <Link route="main">
             <a>
-              <img src={`/static/branding/${logo}.svg`} height="75" />
+              <img src={`/static/branding/${logo}.svg`} height="40" />
             </a>
           </Link>
         </div>
@@ -104,10 +105,9 @@ const MenuDesktop = props => {
                 }}
               />
             </div>
-          </div>
-        )}
-      </ModalConsumer>
-      <NoSSR>
+          </div> )}
+        </ModalConsumer>
+        <NoSSR>
         {hasFavourites && (
           <div
             className="favourites-wrap"
@@ -124,12 +124,20 @@ const MenuDesktop = props => {
           </div>
         )}
       </NoSSR>
+      </div>
+  
+       
+      
       <style jsx>{`
-        .menu {
-          height: 90px;
-          background: white;
-          padding: 0 50px 0 50px;
+        .menu-wrapper {
+          height: 91px;
+
           transform: translateZ(0);
+          ${!transparent?"background-color: var(--color2);":"background: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0) 100%);"}
+          
+        }
+        .menu {
+          padding: 25px 50px 0 50px;
           &.dark {
           }
           &.transparent {
@@ -167,7 +175,7 @@ const MenuDesktop = props => {
           background: var(--color7);
         }
         .split-button {
-          color: #ff4646;
+          color: var(--color7);
           font-size: 14px;
           font-weight: 500;
           text-transform: uppercase;
@@ -196,8 +204,9 @@ const MenuDesktop = props => {
         .split-button-rgt {
           height: 40px;
           box-sizing: border-box;
-          border-radius: 40px;
-          border: solid 2px #ff4646;
+          border-radius: 4px;
+          border: solid 2px var(--color1);
+          background-color: var(--color1);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -227,17 +236,28 @@ const MenuDesktop = props => {
           border-color: transparent;
           &:hover {
             color: var(--color1);
+            border-color: #000000;
           }
         }
         .split-button-lft {
-          border-right: 0;
+          border-right: 2;
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
+          &:hover {
+            color: var(--color7);
+            background-color: var(--color3);
+            border-color: #000000;
+          }
         }
         .split-button-rgt {
-          border-left: 0;
+          border-left: 2;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
+          &:hover {
+            color: var(--color7);
+            border-color: #000000;
+            background-color: var(--color3);
+          }
         }
         .split-button-divider {
           height: 40px;

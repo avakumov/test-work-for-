@@ -29,36 +29,41 @@ const Item = props => {
           height: 100%;
           cursor: pointer;
           box-sizing: border-box;
+          margin-right: 19px;
           &:hover {
-            background: #fafafa;
+            background: #f9f9f9;
           }
         }
         .date {
           font-weight: 400;
           font-size: 14px;
-          color: var(--color9);
+          color: var(--color1);
         }
         .name {
           margin: 12px 0;
           font-weight: 400;
-          font-size: 18px;
+          font-size: 20px;
           line-height: 130%;
           text-transform: uppercase;
+          color: var(--color6);
         }
         .notice {
           font-weight: 400;
           font-size: 14px;
           line-height: 130%;
-          color: #646464;
+          color: var(--color6);
         }
         img {
           display: block;
           object-fit: cover;
           margin-right: 20px;
+          width: 194px;
+          height: 194px;
         }
         .news-body {
           padding-left: 20px;
-          padding-right: 40px;
+          padding-right: 29px;
+          
         }
       `}</style>
     </div>

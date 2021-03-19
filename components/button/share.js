@@ -14,9 +14,9 @@ const Share = ({ onClick, disabled = false }) => {
         .button {
           cursor: pointer;
           white-space: nowrap;
-          color: #646464;
+          color: var(--color6);
           &:hover {
-            color: var(--color9);
+            color: var(--color1);
           }
         }
         svg {
@@ -24,7 +24,7 @@ const Share = ({ onClick, disabled = false }) => {
           margin-right: 10px;
         }
         .name {
-          font-size: 12px;
+          font-size: 14px;
           font-weight: 500;
           text-transform: uppercase;
         }

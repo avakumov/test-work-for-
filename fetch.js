@@ -6,8 +6,8 @@ export default ({ token = null, gmc = null }) => {
   return {
     baseURL: 'https://uos.unistroyrf.ru/promo/1.0',
     headers: {
-      'Alias': 'atmos',
-      //'Alias': 'maxim',
+      //'Alias': 'atmos',
+      'Alias': 'maxim',
       'Accept': 'application/json; charset=utf-8',
       'Content-Type': 'application/json; charset=utf-8'
     },

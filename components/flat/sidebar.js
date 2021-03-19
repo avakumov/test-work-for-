@@ -32,9 +32,6 @@ const FlatSidebar = ({
                 <Content paddingless>
                   <FlatSquare square={flat.square} />
                   <Spacer tSpace={10}>
-                    <Label>
-                      {flat.apartment_type} №{flat.apart_number}
-                    </Label>
                     {flat.rooms_count > 0 && (
                       <Label>{flat.rooms_count}х-комнатная</Label>
                     )}
@@ -51,6 +48,7 @@ const FlatSidebar = ({
                         <Button
                           block
                           primary
+                          important
                           onClick={async () => {
                             const Reservation = await import('@/components/modals/reservation')
                             showModal(Reservation.default, {
@@ -82,7 +80,7 @@ const FlatSidebar = ({
                       </div>
                     </Spacer>
                   )}
-                  <Spacer tSpace={40}>
+                  <Spacer tSpace={98}>
                     <NoSSR>
                       <AppConsumer>
                         {({ hasFavourite }) => (

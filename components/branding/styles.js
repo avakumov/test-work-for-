@@ -1,5 +1,6 @@
 import 'flexboxes/main.css'
-import '@/static/fonts/cera-pro/css.css'
+// import '@/static/fonts/cera-pro/css.css'
+import '@/static/fonts/littera/littera.css'
 
 export default () => (
   <style global jsx>{`
@@ -7,14 +8,15 @@ export default () => (
 
     :root {
       /* Colors */
-      --color1:       /**/ #ff8200;
-      --color1-dark:  /**/ #ff4646;
+      --color1:       /**/ #00A9A4;
+      --color1-dark:  /**/ #00A9A4;
 
-      --color2:       /**/ #f2a890;
-      --color3:       /**/ #4abb62;
-      --color4:       /**/ #b4b4b4;
-      --color5:       /**/ #19d2fa;
-      --color6:       /**/ #41dcbe;
+      --color2:       /**/ #F9F9F9;
+      --color3:       /**/ #A6CE38;
+      --color4:       /**/ #F7931D;
+      --color5:       /**/ #ADADAD;
+      --color6:       /**/ #4E4B4B;
+
       --color7:       /**/ #ffffff;
       --color8:       /**/ #eeeeee;
       --color9:       /**/ #aac800;
@@ -24,8 +26,8 @@ export default () => (
       --color11-dark: /**/ #ffff00;
 
       /* Fonts */
-      --text-font: cera, sans-serif;
-      --heading-font: cera, sans-serif;
+      --text-font: littera-text, sans-serif;
+      --heading-font: littera-text, sans-serif;
     }
     html {
       font-size: 16px;

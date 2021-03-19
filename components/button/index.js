@@ -21,6 +21,7 @@ const Button = props => {
     circle: props.circle,
     selected: props.selected,
     inline: props.inline,
+    important: props.important,
     'small-text': props.smallText,
     'has-left-icon': props.leftIcon,
     'has-right-icon': props.rightIcon
@@ -47,6 +48,12 @@ const Button = props => {
       )}
       <style jsx>{`
         @import 'mixins/r';
+        .primary.important {
+          background-color: var(--color4);
+          :hover {
+            background-color: var(--color3);
+          }
+        }
         .btn {
           cursor: pointer;
           background: white;
@@ -55,13 +62,13 @@ const Button = props => {
           line-height: 1;
           user-select: none;
           display: inline-flex;
-          color: var(--color4);
+          color: var(--color1);
           text-transform: uppercase;
           white-space: nowrap;
           box-sizing: border-box;
           font-size: 16px;
           height: 48px;
-          padding: 0 30px;
+          padding: 0 17px;
           vertical-align: top;
           border-radius: 0px;
           &.transparent {
@@ -104,7 +111,7 @@ const Button = props => {
         .primary {
           border: 0;
           height: 44px;
-          border-radius: 44px;
+          border-radius: 4px;
           color: white;
           background: var(--color1);
           &:hover {
@@ -290,13 +297,14 @@ const Button = props => {
         }
         .outline.primary {
           height: 43px;
-          color: var(--color9);
-          border-radius: 43px;
+          color: var(--color1);
+          border-radius: 4px;
+          font-size: 14px;
           background: none;
-          border: solid 1px var(--color9);
+          border: solid 1px var(--color1);
           &:hover {
             color: white;
-            background: var(--color9);
+            background: var(--color1);
           }
         }
       `}</style>

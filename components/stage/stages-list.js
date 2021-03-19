@@ -106,7 +106,7 @@ const StagesList = ({ stages, currentStage, onStageClick }) => {
                   <div className="hover-marker">
                     {/* prettier-ignore */}
                     <svg width="87" height="39" viewBox="0 0 87 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="1.48462" width="85.1026" height="36.7969" rx="18.3984" stroke="#FF8200"/>
+                      <rect x="0.5" y="1.48462" width="85.1026" height="36.7969" rx="4" stroke="#00A9A4"/>
                     </svg>
                   </div>
                 )}
@@ -114,7 +114,7 @@ const StagesList = ({ stages, currentStage, onStageClick }) => {
                   <div className="current-marker">
                     {/* prettier-ignore */}
                     <svg width="87" height="39" viewBox="0 0 87 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect y="0.950684" width="86.1026" height="37.7969" rx="18.8984" fill="#FF8200"/>
+                      <rect y="0.950684" width="86.1026" height="37.7969" rx="4" fill="#00A9A4"/>
                     </svg>
                   </div>
                 )}

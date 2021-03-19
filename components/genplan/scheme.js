@@ -233,6 +233,11 @@ const Scheme = ({
         </div>
         {props.showControls && (
           <div className="controls">
+                     {props.currentHouseFinishDate && (
+              <div className="control small">
+                Срок сдачи {props.currentHouseFinishDate}
+              </div>
+            )}
             {props.currentHouse && (
               <div className="control">
                 Дом <span className="highlight">{props.currentHouse}</span>
@@ -249,11 +254,7 @@ const Scheme = ({
                 </span>
               </div>
             )}
-            {props.currentHouseFinishDate && (
-              <div className="control small">
-                Срок сдачи {props.currentHouseFinishDate}
-              </div>
-            )}
+   
           </div>
         )}
         {genplanScheme.length > 0 && (
@@ -325,6 +326,7 @@ const Scheme = ({
         .highlight .comment {
         }
         .control {
+          padding-top:8px;
         }
         svg {
           path {

@@ -4,8 +4,8 @@ export default ({ children }) => (
     <style jsx>{`
       .label {
         margin: 3px 0;
-        color: #646464;
-        font-size: 14px;
+        color: var(--color6);
+        font-size: 20px;
         text-transform: uppercase;
       }
     `}</style>

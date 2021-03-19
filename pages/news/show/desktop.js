@@ -5,8 +5,12 @@ import GalleryLight from '@/components/gallery/gallery-light'
 import dateformat from 'dateformat'
 import { Router } from '@/routes'
 import { parseDate } from '@/helpers'
+import LeftArrowAlt from '@/components/icons/left-arrow-icon'
+import RightArrowAlt from '@/components/icons/right-arrow-icon'
 
-const Show = ({ news }) => {
+const Show = (props) => {
+  const {news}  = props
+  console.log(props)
   const humanDate = dateformat(
     new Date(...parseDate(news.published_at)),
     'd.mm.yyyy'
@@ -17,9 +21,9 @@ const Show = ({ news }) => {
       <Content>
         <div className="header flex items-center">
           <div className="flex-none">
-            {/* <Button leftIcon={<LeftArrowAlt />} link> */}
-            {/*   Предыдущая */}
-            {/* </Button> */}
+            <Button leftIcon={<LeftArrowAlt />} link large>
+              Предыдущая
+            </Button>
           </div>
           <div className="back-wrap flex justify-center flex-auto">
             <Button onClick={() => Router.pushRoute('news')} link large>
@@ -27,9 +31,9 @@ const Show = ({ news }) => {
             </Button>
           </div>
           <div className="flex-none">
-            {/* <Button rightIcon={<RightArrowAlt />} link> */}
-            {/*   Следующая */}
-            {/* </Button> */}
+            <Button rightIcon={<RightArrowAlt />} link large>
+              Следующая
+            </Button>
           </div>
         </div>
         <div className="news-body flex">
@@ -59,8 +63,9 @@ const Show = ({ news }) => {
         </div>
         <style jsx>{`
           .news-body {
-            margin-top: 15px;
+            margin-top: 42px;
             padding-top: 25px;
+            color: var(--color6);
           }
           .news-image {
             display: block;
@@ -69,20 +74,20 @@ const Show = ({ news }) => {
           .date {
             font-size: 14px;
             font-weight: 400;
-            color: var(--color9);
+            color: var(--color1);
           }
           .name {
-            margin: 12px 0 15px 0;
+            margin: 20px 0 35px 0;
             font-weight: 500;
-            font-size: 36px;
-            line-height: 110%;
+            font-size: 20px;
+            line-height: 26px;
             text-transform: uppercase;
-            color: #000;
             font-family: var(--heading-font);
           }
           .body {
             font-size: 14px;
             line-height: 150%;
+            font-weight: 400px;
           }
           .law_text {
             margin-top: 20px;

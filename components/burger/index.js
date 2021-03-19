@@ -1,5 +1,8 @@
 export default ({ onClick, mode, inverse = false }) => {
   const color = inverse ? 'white' : '#646464'
+  
+  const burgerUrl = inverse?'/static/branding/burger-white.svg':'/static/branding/burger.svg'
+  const burgerHoverUrl = inverse?'/static/branding/burger-hover-white.svg':'/static/branding/burger-hover.svg'
   return (
     <div onClick={onClick} className="burger-wrap">
       {'close' === mode ? (
@@ -10,13 +13,19 @@ export default ({ onClick, mode, inverse = false }) => {
         </svg>
       ) : (
         // prettier-ignore
-        <svg width="33" height="22" viewBox="0 0 33 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect y="0.405518" width="33" height="3" rx="1.5" fill={color}/>
-          <rect y="9.40552" width="33" height="3" rx="1.5" fill={color}/>
-          <rect y="18.4055" width="33" height="3" rx="1.5" fill={color}/>
-        </svg>
+        <div className="burger">
+        </div>
+        
       )}
       <style jsx>{`
+        .burger {
+          height: 19px;
+          width: 33px;
+          background: center no-repeat url(${burgerUrl});
+          :hover {
+            background-image: url(${burgerHoverUrl});
+          }
+        }
         .burger-wrap {
           width: 33px;
           height: 32px;

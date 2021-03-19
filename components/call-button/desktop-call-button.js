@@ -3,9 +3,10 @@ import classnames from 'classnames'
 import { useContext } from 'react'
 import { SettingsContext } from '@/components/context/settings'
 
-const DesktopCallButton = ({ onClickCall, theme, menuOpened }) => {
+const DesktopCallButton = ({ onClickCall, theme, menuOpened, inverse }) => {
   const settings = useContext(SettingsContext)
   const phonePts = settings.phone_html.split(/\s/)
+  const fontColor = theme==="transparent"? "--color7":"--color1-dark"
 
   return (
     <div
@@ -26,7 +27,8 @@ const DesktopCallButton = ({ onClickCall, theme, menuOpened }) => {
       <style jsx>{`
         @import 'mixins/r';
         .button {
-          font-size: 14px;
+          font-size: 12px;
+          line-height: 13px;
           font-weight: 500;
           text-align: right;
           display: inline-block;
@@ -38,7 +40,7 @@ const DesktopCallButton = ({ onClickCall, theme, menuOpened }) => {
         }
         .label {
           cursor: pointer;
-          color: var(--color1-dark);
+          color: var(${fontColor});
           text-transform: uppercase;
           &:hover {
             text-decoration: underline;
@@ -48,11 +50,10 @@ const DesktopCallButton = ({ onClickCall, theme, menuOpened }) => {
         }
         a {
           font-size: 20px;
-          font-weight: 500;
-          color: #646464;
+          line-height: 28px;
+          font-weight: 700;
+          color: var(--color6);
           text-decoration: none;
-          margin-top: 2px;
-          right: 0.3em;
           position: relative;
           .alternate &,
           .dark &,
