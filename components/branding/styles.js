@@ -48,7 +48,7 @@ export default () => (
       overflow-y: scroll;
       font-family: var(--text-font);
       min-width: 1280px;
-      color: #000;
+      color: var(--color6);
       overscroll-behavior: none;
       .is-mobile &,
       .is-tablet & {
